@@ -5,15 +5,25 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
+sourceCompatibility = 1.8
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-}
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.41.0'
 
-test {
-    useJUnitPlatform()
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    compile group: 'io.cucumber', name: 'cucumber-java', version: '6.10.2'
+
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
+    testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '6.10.2'
+
+    // https://mvnrepository.com/artifact/org.assertj/assertj-core
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.19.0'
+
+    // https://mvnrepository.com/artifact/io.github.prashant-ramcharan/courgette-jvm
+    compile group: 'io.github.prashant-ramcharan', name: 'courgette-jvm', version: '5.10.0'
 }
