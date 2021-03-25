@@ -1,5 +1,6 @@
 package TestDemo;
 
+import driver.DriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java8.En;
@@ -10,28 +11,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.nio.file.Paths;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.openqa.selenium.remote.BrowserType.CHROME;
 
 public class TestEx01 implements En {
-    private WebDriver driver;
-    private final static String CHROME_DRIVER_PATH = "src/test/resources/drivers/chromedriver.exe";
+    private final WebDriver driver = DriverFactory.valueOf(CHROME.toUpperCase()).getDriverManager().getDriver();
 
-    @Before
-    public void setUp() {
-        System.setProperty("webdriver.chrome.driver", Paths.get(CHROME_DRIVER_PATH).toString());
-        if (driver == null) {
-            driver = new ChromeDriver();
-        }
-    }
-
-    @After
-    public void tearDown() {
-        if (driver != null) {
-            driver.close();
-            driver.quit();
-        }
-    }
-
-    TestEx01() {
+    public TestEx01() {
         Given("Navigate to Page ForgotPassword", () -> {
             driver.navigate().to("https://the-internet.herokuapp.com/forgot_password");
         });

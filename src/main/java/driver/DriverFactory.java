@@ -7,13 +7,13 @@ public enum DriverFactory {
         public DriverManager getDriverManager() {
             return new ChromeDriverManager();
         }
-    },
-    FIREFOX {
-        @Override
-        public DriverManager getDriverManager() {
-//            return new FirefoxDriverManager();
-        }
     };
+//    FIREFOX {
+//        @Override
+//        public DriverManager getDriverManager() {
+//            return new FirefoxDriverManager();
+//        }
+//    };
 
     public abstract DriverManager getDriverManager();
 }
