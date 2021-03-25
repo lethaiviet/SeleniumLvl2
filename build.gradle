@@ -32,6 +32,12 @@ dependencies {
     // https://mvnrepository.com/artifact/io.github.prashant-ramcharan/courgette-jvm
     implementation group: 'io.github.prashant-ramcharan', name: 'courgette-jvm', version: '5.10.0'
 
-// https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer
     testImplementation group: 'io.cucumber', name: 'cucumber-picocontainer', version: '6.10.2'
+
+    // https://mvnrepository.com/artifact/commons-logging/commons-logging
+    implementation group: 'commons-logging', name: 'commons-logging', version: '1.2'
+
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '4.3.1'
 }
