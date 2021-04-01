@@ -1,11 +1,3 @@
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -23,7 +15,7 @@
 <h3 align="center">Test Automation Framework</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Test Automation Framework uses Selenium, BDD and Allure reports
     <br />
     <a href="https://github.com/lethaiviet/SeleniumLvl2"><strong>Explore the docs »</strong></a>
     <br />
@@ -34,7 +26,6 @@
     ·
     <a href="https://github.com/lethaiviet/SeleniumLvl2">Request Feature</a>
   </p>
-</p>
 
 
 
@@ -84,10 +75,10 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+* [Selenium](http://www.seleniumhq.org/) - The web framework to automate browsers
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [Cucumber](https://cucumber.io/) - Behavior Driven Development (BDD) library
+* [Allure reports](http://allure.qatools.ru/) - Reporting
 
 
 
@@ -99,29 +90,16 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* [Git](https://git-scm.com/downloads)
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows)
+  
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/lethaiviet/SeleniumLvl2.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
