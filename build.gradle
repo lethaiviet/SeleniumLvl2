@@ -1,6 +1,19 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.8.1"
+    }
+}
+
 plugins {
     id 'java'
+    id "io.qameta.allure" version "2.8.1"
 }
+apply plugin: "io.qameta.allure"
 
 group 'org.example'
 version '1.0-SNAPSHOT'
@@ -40,6 +53,12 @@ dependencies {
 
     // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
     implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '4.3.1'
+
+    // https://mvnrepository.com/artifact/io.qameta.allure/allure-testng
+    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.13.8'
+
+    // https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber6-jvm
+    implementation group: 'io.qameta.allure', name: 'allure-cucumber6-jvm', version: '2.13.8'
 }
 
 

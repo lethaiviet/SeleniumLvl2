@@ -1,7 +1,6 @@
 import io.cucumber.junit.Cucumber;
-import org.junit.runner.RunWith;
-
 import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -10,9 +9,8 @@ import io.cucumber.junit.CucumberOptions;
         tags = "@forgotpassword",
         plugin = {
                 "pretty",
-                "json:build/cucumber-report/cucumber.json",
-                "html:build/cucumber-report/cucumber.html",
-                "junit:build/cucumber-report/cucumber.xml"}
+                "io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm",
+        }
 )
 public class RunTests {
 }
