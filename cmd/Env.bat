@@ -6,5 +6,6 @@ SET WORKSPACE=%CURRENT_PATH%..
 SET BUILD_PATH=%WORKSPACE%\build
 
 SET ALLURE_EXE=%WORKSPACE%\allure-commandline-2.13.9\bin\allure.bat
+SET ALLURE_BIN=%WORKSPACE%\allure-commandline-2.13.9\bin\
 SET ALLURE_RESULTS=%BUILD_PATH%\allure-results
 SET ALLURE_REPORT=%BUILD_PATH%\allure-report
