@@ -3,7 +3,7 @@
 <suite name="First Suite" >
     <test name="Chrome Test" >
         <classes>
-            <class name ="RunTests"></class>
+            <class name ="test.RegisterValidation"></class>
         </classes>
     </test>
 </suite>

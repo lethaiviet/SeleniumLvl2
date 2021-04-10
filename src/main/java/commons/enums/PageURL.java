@@ -3,8 +3,6 @@ package commons.enums;
 import commons.Constants;
 import lombok.Getter;
 
-import java.util.Arrays;
-
 @Getter
 public enum PageURL {
     HOME_PAGE("HomePage.cshtml"),
@@ -14,11 +12,14 @@ public enum PageURL {
     MANAGE_TICKET_PAGE("ManageTicket.cshtml");
 
     private final String pageName;
-    private final String URL;
+    private String URL;
 
     PageURL(String pageName) {
         this.pageName = pageName;
         URL = Constants.RAILWAY_URL + '/' + pageName;
     }
 
+//    public String getURL() {
+//        return URL;
+//    }
 }
