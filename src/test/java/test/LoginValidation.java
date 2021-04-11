@@ -8,10 +8,10 @@ import org.testng.annotations.DataProvider;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/register_validation.feature",
+        features = "src/test/resources/features/login_validation.feature",
         glue = {"definitions"}
 )
-public class RegisterValidation extends AbstractTestNGCucumberTests {
+public class LoginValidation extends AbstractTestNGCucumberTests {
     @Override
     @DataProvider(parallel = false)
     public Object[][] scenarios() {

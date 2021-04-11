@@ -1,12 +1,9 @@
 package definitions;
 
-import commons.enums.PageURL;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java8.En;
 import org.testng.Assert;
-import pages.HomePage;
 import pages.RegisterPage;
-import utils.DriverUtils;
 
 import java.util.List;
 import java.util.Map;
