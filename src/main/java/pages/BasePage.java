@@ -1,5 +1,7 @@
 package pages;
 
+import commons.Constants;
+import commons.enums.NavBar;
 import commons.enums.PageURL;
 import controls.common.imp.Element;
 import io.cucumber.java8.El;
@@ -19,8 +21,9 @@ public class BasePage<T extends BasePage<T>> extends LoadableComponent<T> {
     }
 
     public void selectNavBarItem(String name) {
-        navBar.waitForVisibility(3);
-        navBarItem.setDynamicValue(name);
+        String navBarName = NavBar.valueOf(name).getName();
+        navBar.waitForVisibility(Constants.TIME_OUT_IN_SECONDS);
+        navBarItem.setDynamicValue(navBarName);
         navBarItem.click();
     }
 

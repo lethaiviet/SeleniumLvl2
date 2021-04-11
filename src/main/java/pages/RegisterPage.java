@@ -15,7 +15,7 @@ public class RegisterPage extends BasePage {
     public void isLoaded() throws Error {
         DriverUtils.waitForAjaxJQueryProcess();
         if (!isMatchURL(page)) {
-            throw new Error("HOME_PAGE was not successfully loaded");
+            throw new Error("REGISTER_PAGE was not successfully loaded");
         }
     }
 
