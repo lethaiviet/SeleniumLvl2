@@ -4,7 +4,7 @@ import commons.enums.PageURL;
 import utils.DriverUtils;
 
 public class HomePage extends BasePage {
-    public final static PageURL page = PageURL.HOME_PAGE;
+    public static final PageURL page = PageURL.HOME_PAGE;
 
     @Override
     public void load() {

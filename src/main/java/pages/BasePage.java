@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 import utils.DriverUtils;
 
 public class BasePage<T extends BasePage<T>> extends LoadableComponent<T> {
-    private final static Element navBar = new Element("//*[@id='menu']");
+    private static final Element navBar = new Element("//*[@id='menu']");
     private Element navBarItem = new Element("//a[span='%s']");
 
     @Override

@@ -1,5 +1,6 @@
 package utils;
 
+import commons.Constants;
 import drivers.DriverFactory;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
@@ -56,6 +57,9 @@ public class DriverUtils {
         } catch (Exception var2) {
             logger.error("An error occurred when delay: " + var2.getMessage());
         }
+    }
 
+    public static int getTimeOut(){
+        return Constants.TIME_OUT_IN_SECONDS;
     }
 }

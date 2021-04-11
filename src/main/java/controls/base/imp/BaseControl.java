@@ -59,16 +59,54 @@ public class BaseControl {
         }
     }
 
+    public boolean isDisplayed() {
+        try {
+            this.logger.debug(String.format("is control displayed or not: %s", this.getLocator().toString()));
+            return this.getElement().isDisplayed();
+        } catch (Exception var2) {
+            this.logger.error(String.format("IsDisplayed: Has error with control '%s': %s", this.getLocator().toString(), var2.getMessage()));
+            return false;
+        }
+    }
+
+
+    public void waitForVisibility() {
+        this.waitForVisibility(DriverUtils.getTimeOut());
+    }
+
     public void waitForVisibility(int timeOutInSeconds) {
         try {
             DriverUtils.waitForAjaxJQueryProcess();
 
             this.logger.info(String.format("Wait for control display %s", this.getLocator().toString()));
-            WebDriverWait wait = new WebDriverWait(this.getDriver(), (long) timeOutInSeconds);
+            WebDriverWait wait = new WebDriverWait(this.getDriver(), timeOutInSeconds);
             wait.until(ExpectedConditions.visibilityOfElementLocated(this.getLocator()));
         } catch (Exception var3) {
             this.logger.error(String.format("WaitForDisplay: Has error with control '%s': %s", this.getLocator().toString(), var3.getMessage()));
         }
 
+    }
+
+    public void waitForDisplay(int timeOutInSeconds) {
+        try {
+            DriverUtils.waitForAjaxJQueryProcess();
+
+            this.logger.info(String.format("Wait for control display %s", this.getLocator().toString()));
+            WebDriverWait wait = new WebDriverWait(this.getDriver(), timeOutInSeconds);
+            wait.until(ExpectedConditions.presenceOfElementLocated(this.getLocator()));
+        } catch (Exception var3) {
+            this.logger.error(String.format("WaitForDisplay: Has error with control '%s': %s", this.getLocator().toString(), var3.getMessage()));
+        }
+
+    }
+
+    public String getText() {
+        try {
+            this.logger.debug(String.format("Get text of element %s", this.getLocator().toString()));
+            return this.getElement().getText();
+        } catch (Exception var2) {
+            this.logger.error(String.format("Has error with control '%s': %s", this.getLocator().toString(), var2.getMessage()));
+            throw var2;
+        }
     }
 }

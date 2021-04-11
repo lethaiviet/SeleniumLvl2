@@ -10,5 +10,11 @@ public interface IBaseControl {
 
     WebElement getElement();
 
+    boolean isDisplayed();
+
     void waitForVisibility(int timeOutInSeconds);
+
+    void waitForDisplay(int timeOutInSeconds);
+
+    String getText();
 }

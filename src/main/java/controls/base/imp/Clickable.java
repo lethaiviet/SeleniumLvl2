@@ -3,9 +3,10 @@ package controls.base.imp;
 import controls.base.IClickable;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.DriverUtils;
 
 public class Clickable extends BaseControl implements IClickable {
@@ -63,5 +64,26 @@ public class Clickable extends BaseControl implements IClickable {
             this.logger.error(String.format("Has error with control '%s': %s", this.getLocator().toString(), var2.getMessage()));
             throw var2;
         }
+    }
+
+    public void waitForElementClickable() {
+        this.waitForElementClickable(DriverUtils.getTimeOut());
+    }
+
+    public void waitForElementClickable(int timeOutInSecond) {
+        try {
+            DriverUtils.waitForAjaxJQueryProcess();
+
+            if (!this.isDisplayed()) {
+                this.waitForDisplay(timeOutInSecond);
+            }
+
+            this.logger.info(String.format("Wait for element click able %s", this.getLocator().toString()));
+            WebDriverWait wait = new WebDriverWait(this.getDriver(), timeOutInSecond);
+            wait.until(ExpectedConditions.elementToBeClickable(this.getElement()));
+        } catch (Exception var3) {
+            this.logger.error(String.format("WaitForElementClickable: Has error with control '%s': %s", this.getLocator().toString(), var3.getMessage()));
+        }
+
     }
 }
