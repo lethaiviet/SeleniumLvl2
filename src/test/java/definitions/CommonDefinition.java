@@ -1,8 +1,10 @@
 package definitions;
 
+import data.UserInfo;
 import io.cucumber.java8.En;
 import org.junit.Assert;
 import pages.BasePage;
+import utils.UserInfoUtils;
 
 public class CommonDefinition implements En {
     BasePage basePage = new BasePage();

@@ -1,0 +1,20 @@
+[
+    {
+        "email": "test1@test.com",
+        "key": "USER_01",
+        "password": 123456789,
+        "pid": "123456789PID"
+    },
+    {
+        "email": "test2@test.com",
+        "key": "USER_02",
+        "password": 123456789,
+        "pid": "123456789PID"
+    },
+    {
+        "email": "test3@test.com",
+        "key": "USER_03",
+        "password": 123456789,
+        "pid": "123456789PID"
+    }
+]

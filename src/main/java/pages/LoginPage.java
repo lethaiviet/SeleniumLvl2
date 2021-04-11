@@ -1,13 +1,19 @@
 package pages;
 
 import commons.enums.PageURL;
+import controls.common.imp.Button;
 import controls.common.imp.Element;
 import controls.common.imp.Label;
+import controls.common.imp.TextBox;
+import data.UserInfo;
 import utils.DriverUtils;
 
 public class LoginPage extends BasePage {
     public static final PageURL page = PageURL.LOGIN_PAGE;
     private static final Element hyperlink = new Element("//a[normalize-space()=\"%s\"]");
+    private static final TextBox txtBoxUserName = new TextBox("//*[@id='username']");
+    private static final TextBox txtBoxPassword = new TextBox("//*[@id='password']");
+    private static final Button btnLogin = new Button("//input[@type='submit']");
 
     @Override
     public void load() {
@@ -28,4 +34,16 @@ public class LoginPage extends BasePage {
         hyperlink.click();
     }
 
+    public void fillLoginForm(String email, String password) {
+        txtBoxUserName.clear();
+        txtBoxUserName.enter(email);
+
+        txtBoxPassword.clear();
+        txtBoxPassword.enter(password);
+    }
+
+    public void login(UserInfo userInfo) {
+        fillLoginForm(userInfo.getEmail(), userInfo.getPassword());
+        btnLogin.click();
+    }
 }

@@ -5,6 +5,7 @@
         <classes>
             <class name ="test.RegisterValidation"></class>
             <class name="test.LoginValidation"></class>
+            <class name="test.BookTicketValidation"></class>
         </classes>
     </test>
 </suite>
