@@ -5,21 +5,17 @@ import lombok.Getter;
 
 @Getter
 public enum PageURL {
-    HOME_PAGE("HomePage.cshtml"),
-    REGISTER_PAGE("Register.cshtml"),
-    LOGIN_PAGE("Login.cshtml"),
-    BOOK_TICKET_PAGE("BookTicketPage.cshtml"),
-    MANAGE_TICKET_PAGE("ManageTicket.cshtml");
+    HOME_PAGE("Page/HomePage.cshtml"),
+    REGISTER_PAGE("Account/Register.cshtml"),
+    LOGIN_PAGE("Account/Login.cshtml");
+//    BOOK_TICKET_PAGE("BookTicketPage.cshtml"),
+//    MANAGE_TICKET_PAGE("ManageTicket.cshtml");
 
-    private final String pageName;
+    private final String route;
     private String URL;
 
-    PageURL(String pageName) {
-        this.pageName = pageName;
-        URL = Constants.RAILWAY_URL + '/' + pageName;
+    PageURL(String route) {
+        this.route = route;
+        URL = Constants.RAILWAY_URL + '/' + route;
     }
-
-//    public String getURL() {
-//        return URL;
-//    }
 }

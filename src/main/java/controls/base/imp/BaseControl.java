@@ -19,6 +19,8 @@ public class BaseControl {
 
     public BaseControl(String locator) {
         this.locator = locator;
+        this.dynamicLocator = locator;
+        this.byLocator = this.getByLocator();
     }
 
     public void setDynamicValue(Object... args) {

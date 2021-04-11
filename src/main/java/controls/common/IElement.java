@@ -1,4 +1,6 @@
 package controls.common;
 
-public interface IElement {
+import controls.base.IEditable;
+
+public interface IElement extends IEditable {
 }

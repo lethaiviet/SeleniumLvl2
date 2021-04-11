@@ -3,8 +3,8 @@ package pages;
 import commons.enums.PageURL;
 import utils.DriverUtils;
 
-public class HomePage extends BasePage {
-    public final static PageURL page = PageURL.HOME_PAGE;
+public class RegisterPage extends BasePage {
+    public final static PageURL page = PageURL.REGISTER_PAGE;
 
     @Override
     public void load() {
