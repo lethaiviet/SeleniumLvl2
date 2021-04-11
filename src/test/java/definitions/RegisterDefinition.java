@@ -17,10 +17,6 @@ public class RegisterDefinition implements En {
             registerPage.fillRegisterForm(dataLst.get(0));
         });
 
-        When("I click on the {word} button", (String name) -> {
-            registerPage.clickRegisterButton();
-        });
-
         Then("I should cannot register new account with an error message", (DataTable itemsData) -> {
             List<Map<String, String>> dataLst = itemsData.asMaps(String.class, String.class);
             String errorMsgActual = registerPage.getErrorMsg();

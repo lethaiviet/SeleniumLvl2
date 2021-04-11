@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.DriverUtils;
 
+import java.util.List;
+
 public class BaseControl {
     private Logger logger = Logger.getLogger(Element.class);
     private String dynamicLocator;
@@ -108,5 +110,10 @@ public class BaseControl {
             this.logger.error(String.format("Has error with control '%s': %s", this.getLocator().toString(), var2.getMessage()));
             throw var2;
         }
+    }
+
+    public List<WebElement> getElements() {
+        DriverUtils.waitForAjaxJQueryProcess();
+        return this.parent != null ? this.parent.getElement().findElements(this.getLocator()) : this.getDriver().findElements(this.getLocator());
     }
 }

@@ -53,13 +53,18 @@ public class DriverUtils {
 
     public static void delay(double timeInSecond) {
         try {
-            Thread.sleep((long)(timeInSecond * 1000.0D));
+            Thread.sleep((long) (timeInSecond * 1000.0D));
         } catch (Exception var2) {
             logger.error("An error occurred when delay: " + var2.getMessage());
         }
     }
 
-    public static int getTimeOut(){
+    public static int getTimeOut() {
         return Constants.TIME_OUT_IN_SECONDS;
+    }
+
+    public static String getPageSource() {
+        waitForAjaxJQueryProcess();
+        return getWebDriver().getPageSource();
     }
 }

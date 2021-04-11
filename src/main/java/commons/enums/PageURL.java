@@ -8,8 +8,8 @@ public enum PageURL {
     HOME_PAGE("Page/HomePage.cshtml"),
     REGISTER_PAGE("Account/Register.cshtml"),
     LOGIN_PAGE("Account/Login.cshtml"),
-    BOOK_TICKET_PAGE("Page/BookTicketPage.cshtml");
-//    MANAGE_TICKET_PAGE("ManageTicket.cshtml");
+    BOOK_TICKET_PAGE("Page/BookTicketPage.cshtml"),
+    MY_TICKET("Page/ManageTicket.cshtml");
 
     private final String route;
     private String URL;

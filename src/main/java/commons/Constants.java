@@ -5,4 +5,7 @@ public class Constants {
     public static final String USER_JSON_FILE = "src/test/resources/data/dataJson/user_info.json";
 
     public static final int TIME_OUT_IN_SECONDS = 3;
+    public static final String CACHE_ALL_OPTIONS_OF_SELECTED_DROPDOWN = "CACHE_ALL_OPTIONS_OF_SELECTED_DROPDOWN";
+    public static final String CACHE_ALL_TICKET_INFO_ON_MY_TICKET = "CACHE_ALL_TICKET_INFO_ON_MY_TICKET";
+    public static final String CACHE_ALL_TICKET_INFO_ON_BOOK_TICKET = "CACHE_ALL_TICKET_INFO_ON_BOOK_TICKET";
 }

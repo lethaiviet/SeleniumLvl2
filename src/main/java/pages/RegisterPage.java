@@ -15,7 +15,6 @@ public class RegisterPage extends BasePage {
     private static final TextBox txtBoxPassword = new TextBox("//*[@id='password']");
     private static final TextBox txtBoxConfirmPassword = new TextBox("//*[@id='confirmPassword']");
     private static final TextBox txtBoxPID = new TextBox("//*[@id='pid']");
-    private static final Button btnRegister = new Button("//input[@type='submit']");
     private static final Label lblErrorMsg = new Label("//*[@class='message error']");
 
     @Override
@@ -47,16 +46,6 @@ public class RegisterPage extends BasePage {
 
         txtBoxPID.clear();
         txtBoxPID.enter(data.get("PID"));
-    }
-
-    public void clickRegisterButton() {
-        btnRegister.waitForElementClickable();
-        btnRegister.click();
-        waitForCompletedRegistering();
-    }
-
-    public void waitForCompletedRegistering() {
-        DriverUtils.waitForAjaxJQueryProcess();
     }
 
     public String getErrorMsg() {

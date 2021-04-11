@@ -3,6 +3,8 @@ package controls.base.imp;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public interface IBaseControl {
     void setDynamicValue(Object... var1);
 
@@ -17,4 +19,6 @@ public interface IBaseControl {
     void waitForDisplay(int timeOutInSeconds);
 
     String getText();
+
+    List<WebElement> getElements();
 }

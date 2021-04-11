@@ -13,7 +13,6 @@ public class LoginPage extends BasePage {
     private static final Element hyperlink = new Element("//a[normalize-space()=\"%s\"]");
     private static final TextBox txtBoxUserName = new TextBox("//*[@id='username']");
     private static final TextBox txtBoxPassword = new TextBox("//*[@id='password']");
-    private static final Button btnLogin = new Button("//input[@type='submit']");
 
     @Override
     public void load() {
@@ -44,6 +43,6 @@ public class LoginPage extends BasePage {
 
     public void login(UserInfo userInfo) {
         fillLoginForm(userInfo.getEmail(), userInfo.getPassword());
-        btnLogin.click();
+        clickSubmitButton();
     }
 }
