@@ -9,8 +9,8 @@ Feature: Book ticket validation
     When I select option from the dropdowns
       | Name          | Option  |
       | DEPART_DATE   | random  |
-      | DEPART_FROM   | random  |
       | ARRIVE_AT     | random  |
+      | DEPART_FROM   | random  |
       | SEAT_TYPE     | random  |
       | TICKET_AMOUNT | default |
     And I scrape all information of selected dropdown on BOOK_TICKET

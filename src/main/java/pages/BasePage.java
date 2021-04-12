@@ -60,7 +60,7 @@ public class BasePage<T extends BasePage<T>> extends LoadableComponent<T> {
     }
 
     public List<TicketInfo> getTicketInfoInTableOnCurrentPage() {
-        List<List<String>> data = ScraperHelper.scrapeFirstTableInPage();
+        List<List<String>> data = ScraperHelper.scrapeLastTableInPage();
         List<TicketInfo> result = data.stream()
                 .map(TicketInfo::new)
                 .collect(Collectors.toList());

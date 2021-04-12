@@ -35,7 +35,7 @@ public class BookTicketPage extends BasePage {
         if (option.equals("random")) {
             option = dropdownBookTicket.getRandomOption();
         }
-		
+
         if (!option.equals(dropdownBookTicket.getSelected())) {
             dropdownBookTicket.select(option);
             dropdownBookTicket.waitForSelectedOptionToBePresent(option, Constants.TIME_OUT_IN_SECONDS);

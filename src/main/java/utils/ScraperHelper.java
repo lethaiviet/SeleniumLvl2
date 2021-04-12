@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ScraperHelper {
-    public static List<List<String>> scrapeFirstTableInPage() {
-        Element table = getFirstTableInCurrentPage();
+    public static List<List<String>> scrapeLastTableInPage() {
+        Element table = getLastTableInCurrentPage();
         Elements rows = getAllRows(table);
 
         List<List<String>> dataTableSkipHeader = new ArrayList<>();
@@ -42,9 +42,10 @@ public class ScraperHelper {
                 .collect(Collectors.toList());
     }
 
-    private static Element getFirstTableInCurrentPage() {
+    private static Element getLastTableInCurrentPage() {
         String htmlCurrentPage = DriverUtils.getPageSource();
         Document doc = Jsoup.parse(htmlCurrentPage);
-        return getAllTables(doc).get(0);
+        Elements AllTables = getAllTables(doc);
+        return AllTables.get(AllTables.size() - 1);
     }
 }

@@ -12,4 +12,3 @@ Feature: Register validation
     Then I should cannot register new account with an error message
       | Message                               |
       | This email address is already in use. |
-

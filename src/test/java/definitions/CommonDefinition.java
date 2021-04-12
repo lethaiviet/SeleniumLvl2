@@ -29,7 +29,7 @@ public class CommonDefinition implements En {
         });
 
         When("I scrape all information of tickets in table on {word}", (String pageName) -> {
-            String key = pageName.equals("MY_TICKET") ?
+            String key = pageName.equals("MY_TICKET_PAGE") ?
                     Constants.CACHE_ALL_TICKET_INFO_ON_MY_TICKET :
                     Constants.CACHE_ALL_TICKET_INFO_ON_BOOK_TICKET;
             CacheHelper.setValue(key, basePage.getTicketInfoInTableOnCurrentPage());
