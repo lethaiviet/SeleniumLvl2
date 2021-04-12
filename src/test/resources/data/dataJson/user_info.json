@@ -1,9 +1,9 @@
 [
     {
-        "email": "test1@test.com",
+        "email": "test@test.com",
         "key": "USER_01",
-        "password": 123456789,
-        "pid": "123456789PID"
+        "password": "test@test.com",
+        "pid": "1234567890dsdsdasd"
     },
     {
         "email": "test2@test.com",

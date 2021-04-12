@@ -1,5 +1,6 @@
 package pages;
 
+import commons.Constants;
 import commons.enums.Dropdown;
 import commons.enums.PageURL;
 import controls.common.imp.ComboBox;
@@ -32,9 +33,12 @@ public class BookTicketPage extends BasePage {
         String name = Dropdown.valueOf(dropdownKey).getName();
         dropdownBookTicket.setDynamicValue(name);
         if (option.equals("random")) {
-            dropdownBookTicket.selectRandomOption();
-        } else {
+            option = dropdownBookTicket.getRandomOption();
+        }
+		
+        if (!option.equals(dropdownBookTicket.getSelected())) {
             dropdownBookTicket.select(option);
+            dropdownBookTicket.waitForSelectedOptionToBePresent(option, Constants.TIME_OUT_IN_SECONDS);
         }
     }
 

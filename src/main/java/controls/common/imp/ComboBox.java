@@ -57,12 +57,6 @@ public class ComboBox extends Clickable implements IComboBox {
         return option.equals(getSelected());
     }
 
-    public void selectRandomOption() {
-        String option = getRandomOption();
-        if (isSelectedOption(option)) return;
-        select(option);
-    }
-
     public void waitForSelectedOptionToBePresent(final String option, int timeOutInSecond) {
         try {
             WebDriverWait wait = new WebDriverWait(this.getDriver(), timeOutInSecond);

@@ -23,7 +23,7 @@ public class BookTicketDefinition implements En {
 
         When("I scrape all information of selected dropdown on {}", (String pageKey) -> {
             Map<String, String> data = bookTicketPage.getAllOptionsOfSelectedDropdown();
-            CacheHelper.setValue(Constants.CACHE_ALL_OPTIONS_OF_SELECTED_DROPDOWN, data);
+            CacheHelper.setValue(Constants.CACHE_ALL_OPTIONS_OF_SELECTED_DROPDOWN, new TicketInfo(data));
         });
 
         Then("The PID on BOOK_TICKET matches with the PID of {word}", (String userKey) -> {
@@ -33,13 +33,16 @@ public class BookTicketDefinition implements En {
             Assert.assertEquals(pipActual, pipExpected, message);
         });
 
-        Then("The ticket information matches with the booking data", (String userKey) -> {
-            Map<String, String> bookingData =
-                    CacheHelper.getValue(Constants.CACHE_ALL_OPTIONS_OF_SELECTED_DROPDOWN, Map.class);
+        Then("The ticket information matches with the booking data", () -> {
+            TicketInfo bookingData =
+                    CacheHelper.getValue(Constants.CACHE_ALL_OPTIONS_OF_SELECTED_DROPDOWN, TicketInfo.class);
 
             List<TicketInfo> ticketInfoLst =
                     CacheHelper.getValue(Constants.CACHE_ALL_TICKET_INFO_ON_BOOK_TICKET, List.class);
-            //TO DO ...
+
+            TicketInfo ticketInfo = ticketInfoLst.get(0);
+            String message = "The ticket information should match with the booking data";
+            Assert.assertEquals(bookingData, ticketInfo, message);
         });
     }
 }
