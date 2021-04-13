@@ -13,15 +13,6 @@ import utils.DriverUtils;
         features = "src/test/resources/features/book_ticket_validation.feature",
         glue = {"definitions"}
 )
-public class BookTicketValidation extends AbstractTestNGCucumberTests {
-    @Override
-    @DataProvider(parallel = false)
-    public Object[][] scenarios() {
-        return super.scenarios();
-    }
+public class BookTicketValidation extends CommonValidation {
 
-    @AfterMethod
-    public void closeBrowser() {
-        DriverUtils.quitDriver();
-    }
 }

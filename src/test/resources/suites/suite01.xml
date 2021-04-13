@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="First Suite">
-    <test name="Chrome Test">
+<suite name="Railway validation">
+    <test name="Chrome Test" thread-count="3" parallel="true">
+        <parameter name="browser" value="chrome"/>
         <classes>
-            <class name ="test.RegisterValidation"></class>
+            <class name="test.RegisterValidation"></class>
             <class name="test.LoginValidation"></class>
             <class name="test.BookTicketValidation"></class>
             <class name="test.MyTicketValidation"></class>

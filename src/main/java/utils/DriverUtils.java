@@ -8,27 +8,45 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.function.Function;
-
 import static org.openqa.selenium.remote.BrowserType.CHROME;
 
 public class DriverUtils {
-    private static Logger logger = Logger.getLogger(DriverUtils.class);
+    private static ThreadLocal<String> driverType = new ThreadLocal<>();
+
+    private static final Logger logger = Logger.getLogger(DriverUtils.class);
+
+    private static String getDriverType() {
+        if (driverType != null && driverType.get() == null) {
+            driverType.set(CHROME);
+        }
+        return driverType.get();
+
+    }
+
+    public static void setDriverType(String type) {
+        if (driverType != null && driverType.get() == null) {
+            driverType.set(type);
+        }
+    }
 
     public static WebDriver getDriver() {
-        return DriverFactory.valueOf(CHROME.toUpperCase()).getDriverManager().getDriver();
+        return DriverFactory.valueOf(getDriverType().toUpperCase())
+                .getDriverManager()
+                .getDriver();
     }
 
     public static void quitDriver() {
-        DriverFactory.valueOf(CHROME.toUpperCase()).getDriverManager().quitDriver();
+        DriverFactory.valueOf(getDriverType().toUpperCase())
+                .getDriverManager()
+                .quitDriver();
     }
 
     public static String getCurrentURL() {
-        return getDriver().getCurrentUrl();
+        return getWebDriver().getCurrentUrl();
     }
 
     public static void navigate(String url) {
-        getDriver().get(url);
+        getWebDriver().get(url);
     }
 
     public static WebDriver getWebDriver() {

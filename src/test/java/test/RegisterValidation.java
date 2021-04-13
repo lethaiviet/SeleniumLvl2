@@ -13,15 +13,6 @@ import utils.DriverUtils;
         features = "src/test/resources/features/register_validation.feature",
         glue = {"definitions"}
 )
-public class RegisterValidation extends AbstractTestNGCucumberTests {
-    @Override
-    @DataProvider(parallel = false)
-    public Object[][] scenarios() {
-        return super.scenarios();
-    }
+public class RegisterValidation extends CommonValidation {
 
-    @AfterMethod
-    public void closeBrowser() {
-        DriverUtils.quitDriver();
-    }
 }

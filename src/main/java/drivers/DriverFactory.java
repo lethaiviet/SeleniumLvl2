@@ -5,15 +5,15 @@ public enum DriverFactory {
     CHROME {
         @Override
         public DriverManager getDriverManager() {
-            return new ChromeDriverManager();
+            return new ChromeDriver();
+        }
+    },
+    FIREFOX {
+        @Override
+        public DriverManager getDriverManager() {
+            return new FirefoxDriver();
         }
     };
-//    FIREFOX {
-//        @Override
-//        public DriverManager getDriverManager() {
-//            return new FirefoxDriverManager();
-//        }
-//    };
 
     public abstract DriverManager getDriverManager();
 }
