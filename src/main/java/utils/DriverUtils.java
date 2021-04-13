@@ -19,6 +19,10 @@ public class DriverUtils {
         return DriverFactory.valueOf(CHROME.toUpperCase()).getDriverManager().getDriver();
     }
 
+    public static void quitDriver() {
+        DriverFactory.valueOf(CHROME.toUpperCase()).getDriverManager().quitDriver();
+    }
+
     public static String getCurrentURL() {
         return getDriver().getCurrentUrl();
     }

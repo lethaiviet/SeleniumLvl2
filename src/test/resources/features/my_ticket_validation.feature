@@ -20,9 +20,9 @@ Feature: My ticket validation
     And I scrape the total tickets in note on MY_TICKET_PAGE after booking new tickets
     And I scrape all information of tickets in table on MY_TICKET_PAGE
     Then The total tickets match the note on MY_TICKET_PAGE
-    And The ticket information on BOOK_TICKET and MY_TICKET_PAGE page should be consistent
+    And The ticket information on BOOK_TICKET_PAGE and MY_TICKET_PAGE page should be consistent
     Examples:
       | count |
       | 1     |
-#      | 2     |
-#      | 3     |
+      | 2     |
+      | 3     |

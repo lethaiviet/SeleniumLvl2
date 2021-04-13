@@ -4,7 +4,9 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.junit.runner.RunWith;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
+import utils.DriverUtils;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -16,5 +18,10 @@ public class RegisterValidation extends AbstractTestNGCucumberTests {
     @DataProvider(parallel = false)
     public Object[][] scenarios() {
         return super.scenarios();
+    }
+
+    @AfterMethod
+    public void closeBrowser() {
+        DriverUtils.quitDriver();
     }
 }
