@@ -15,7 +15,7 @@
 <h3 align="center">Test Automation Framework</h3>
 
   <p align="center">
-    Test Automation Framework uses Selenium, BDD and Allure reports
+    Test Automation Framework uses Selenium, BDD, TestNg and Allure reports
     <br />
     <a href="https://github.com/lethaiviet/SeleniumLvl2"><strong>Explore the docs »</strong></a>
     <br />
@@ -47,9 +47,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -60,18 +57,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Website need testing][product-screenshot]](http://www.railway.somee.com/Page/HomePage.cshtml)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+You know, Time is not limit but with each person only have about 60 years in life.
+This framework maybe not absolutely necessary, but it is available to help out work better and faster.
+Save time for our life!
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+Test Automation Framework uses Selenium, BDD, TestNg and Allure reports to testing the  http://www.railway.somee.com website
 
 ### Built With
 
@@ -79,8 +71,8 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Cucumber](https://cucumber.io/) - Behavior Driven Development (BDD) library
 * [Allure reports](http://allure.qatools.ru/) - Reporting
-
-
+* [Webdriver Manager](https://github.com/bonigarcia/webdrivermanager) - Driver Manager
+* [TestNg](https://testng.org/doc/) - a testing framework
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -92,7 +84,7 @@ To get a local copy up and running follow these simple example steps.
 
 * [Git](https://git-scm.com/downloads)
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows)
-  
+* [Lombok Plugin on IntelliJ IDEA](https://projectlombok.org/setup/intellij)
 
 ### Installation
 
@@ -108,41 +100,12 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Le Thai Viet - [lethaiviet92@gmail.com]() 
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/lethaiviet/SeleniumLvl2](https://github.com/lethaiviet/SeleniumLvl2)
 
 
 
