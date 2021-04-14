@@ -48,7 +48,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#Issues">Issues</a></li>
   </ol>
 </details>
 
@@ -95,9 +95,18 @@ Clone the repo
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
+1. Setup allure path to environment variable
+   ```sh
+   cmd\00_SetupAllureSever.bat
+   ```
+2. Run suite
+   ```sh
+   cmd\01_RunSuite.bat
+   ```
+3. Generate report and open allure server
+   ```sh
+   cmd\02_OpenAllureServer.bat
+   ```
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- CONTACT -->
@@ -109,23 +118,12 @@ Project Link: [https://github.com/lethaiviet/SeleniumLvl2](https://github.com/le
 
 
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
-
-
+<!-- ISSUES -->
+## Issues
+Currently, the report is generated allure-testng have the below issue, so the report cannot show all the steps in cucumber
+* [Allure Test NG report TestBody is missing](https://stackoverflow.com/questions/57566093/allure-test-ng-report-testbody-is-missing)
+* [Test body is missed in report if run test via "java org.testng.TestNG suite.xml"](https://github.com/allure-framework/allure-java/issues/301)
+* [Test body is missing in (cucumber) testNG report"](https://github.com/allure-framework/allure-java/issues/398)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
