@@ -17,7 +17,7 @@ public class FirefoxDriver extends DriverManager {
     }
 
     private FirefoxOptions getFirefoxOptions() {
-        // A few valid Options for Chrome, showcase purpose.
+        // A few valid Options for firefox, showcase purpose.
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--disable-notifications");
         options.addArguments("--start-maximized");

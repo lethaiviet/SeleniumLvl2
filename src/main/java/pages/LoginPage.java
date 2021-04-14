@@ -1,9 +1,7 @@
 package pages;
 
 import commons.enums.PageURL;
-import controls.common.imp.Button;
 import controls.common.imp.Element;
-import controls.common.imp.Label;
 import controls.common.imp.TextBox;
 import data.UserInfo;
 import utils.DriverUtils;

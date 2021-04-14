@@ -7,8 +7,6 @@ import utils.DriverUtils;
 import utils.StringHelper;
 
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class MyTicketPage extends BasePage {
     public static final PageURL page = PageURL.MY_TICKET_PAGE;
