@@ -20,6 +20,8 @@ allure {
 
     autoconfigure = false
     aspectjweaver = true
+    resultsDir = file('../../allure-results')
+    reportDir = file('../../allure-report')
 
     useCucumberJVM() {
         version = '2.13.2'

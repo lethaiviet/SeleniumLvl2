@@ -68,7 +68,7 @@ Test Automation Framework uses Selenium, BDD, TestNg and Allure reports to testi
 ### Built With
 
 * [Selenium](http://www.seleniumhq.org/) - The web framework to automate browsers
-* [Maven](https://maven.apache.org/) - Dependency Management
+* [Gradle](https://gradle.org/) - Dependency Management
 * [Cucumber](https://cucumber.io/) - Behavior Driven Development (BDD) library
 * [Allure reports](http://allure.qatools.ru/) - Reporting
 * [Webdriver Manager](https://github.com/bonigarcia/webdrivermanager) - Driver Manager
