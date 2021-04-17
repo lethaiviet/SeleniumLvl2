@@ -5,12 +5,12 @@ import controls.common.imp.Element;
 import controls.common.imp.TextBox;
 import data.UserInfo;
 import utils.DriverUtils;
+import utils.JsonLocatorUtils;
 
 public class LoginPage extends BasePage {
     public static final PageURL page = PageURL.LOGIN_PAGE;
-    private static final Element hyperlink = new Element("//a[normalize-space()=\"%s\"]");
-    private static final TextBox txtBoxUserName = new TextBox("//*[@id='username']");
-    private static final TextBox txtBoxPassword = new TextBox("//*[@id='password']");
+    private final Element hyperlink = new Element(JsonLocatorUtils.get("hyperlink"));
+    private final TextBox txtBoxUserName = new TextBox(JsonLocatorUtils.get("txtBoxUserName"));
 
     @Override
     public void load() {

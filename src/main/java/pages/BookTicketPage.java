@@ -6,13 +6,14 @@ import commons.enums.PageURL;
 import controls.common.imp.ComboBox;
 import controls.common.imp.Label;
 import utils.DriverUtils;
+import utils.JsonLocatorUtils;
 
 import java.util.*;
 
 public class BookTicketPage extends BasePage {
     public static final PageURL page = PageURL.BOOK_TICKET_PAGE;
-    private static final ComboBox dropdownBookTicket = new ComboBox("//select[@name='%s']");
-    private static final Label lblPid = new Label("//li[2]/strong[2]");
+    private final ComboBox dropdownBookTicket = new ComboBox(JsonLocatorUtils.get("dropdownBookTicket"));
+    private final Label lblPid = new Label(JsonLocatorUtils.get("lblPid"));
 
     @Override
     public void load() {

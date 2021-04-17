@@ -4,16 +4,16 @@ import commons.enums.PageURL;
 import controls.common.imp.Label;
 import controls.common.imp.TextBox;
 import utils.DriverUtils;
+import utils.JsonLocatorUtils;
 
 import java.util.Map;
 
 public class RegisterPage extends BasePage {
     public static final PageURL page = PageURL.REGISTER_PAGE;
-    private static final TextBox txtBoxEmail = new TextBox("//*[@id='email']");
-    private static final TextBox txtBoxPassword = new TextBox("//*[@id='password']");
-    private static final TextBox txtBoxConfirmPassword = new TextBox("//*[@id='confirmPassword']");
-    private static final TextBox txtBoxPID = new TextBox("//*[@id='pid']");
-    private static final Label lblErrorMsg = new Label("//*[@class='message error']");
+    private final TextBox txtBoxEmail = new TextBox(JsonLocatorUtils.get("txtBoxEmail"));
+    private final TextBox txtBoxConfirmPassword = new TextBox(JsonLocatorUtils.get("txtBoxConfirmPassword"));
+    private final TextBox txtBoxPID = new TextBox(JsonLocatorUtils.get("txtBoxPID"));
+    private final Label lblErrorMsg = new Label(JsonLocatorUtils.get("lblErrorMsg"));
 
     @Override
     public void load() {

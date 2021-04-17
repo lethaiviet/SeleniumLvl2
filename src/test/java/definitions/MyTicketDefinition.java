@@ -53,7 +53,7 @@ public class MyTicketDefinition implements En {
 
             int numTicketBooking = ticketInfoLst.get(0).getAmount();
             String message = "The total tickets should match the note on " + pageKey;
-            Assert.assertEquals(numTicketBefore + numTicketBooking, numTicketAfter, message);
+            Assert.assertEquals(numTicketAfter,numTicketBefore + numTicketBooking, message);
         });
 
     }

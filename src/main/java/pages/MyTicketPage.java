@@ -4,15 +4,16 @@ import commons.enums.PageURL;
 import controls.common.imp.Button;
 import controls.common.imp.Element;
 import utils.DriverUtils;
+import utils.JsonLocatorUtils;
 import utils.StringHelper;
 
 import java.util.List;
 
 public class MyTicketPage extends BasePage {
     public static final PageURL page = PageURL.MY_TICKET_PAGE;
-    public static final Element txtMessageNoData = new Element("//*[@id='content']");
-    public static final Element txtNote = new Element("//*[@id='content']/div/li[1]");
-    public static final Button btnCancel = new Button("//td/input[@value='Cancel']");
+    public final Element txtMessageNoData = new Element(JsonLocatorUtils.get("txtMessageNoData"));
+    public final Element txtNote = new Element(JsonLocatorUtils.get("txtNote"));
+    public final Button btnCancel = new Button(JsonLocatorUtils.get("btnCancel"));
 
     @Override
     public void load() {

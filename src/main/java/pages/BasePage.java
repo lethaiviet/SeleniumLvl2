@@ -5,18 +5,21 @@ import commons.enums.NavBar;
 import commons.enums.PageURL;
 import controls.common.imp.Button;
 import controls.common.imp.Element;
+import controls.common.imp.TextBox;
 import data.TicketInfo;
 import org.openqa.selenium.support.ui.LoadableComponent;
 import utils.DriverUtils;
+import utils.JsonLocatorUtils;
 import utils.ScraperHelper;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class BasePage<T extends BasePage<T>> extends LoadableComponent<T> {
-    private static final Element navBar = new Element("//*[@id='menu']");
-    private Element navBarItem = new Element("//a[span='%s']");
-    protected static final Button btnSubmit = new Button("//input[@type='submit']");
+    private final Element navBar = new Element(JsonLocatorUtils.get("navBar"));
+    private final Element navBarItem = new Element(JsonLocatorUtils.get("navBarItem"));
+    protected final Button btnSubmit = new Button(JsonLocatorUtils.get("btnSubmit"));
+    protected final TextBox txtBoxPassword = new TextBox(JsonLocatorUtils.get("txtBoxPassword"));
 
     @Override
     protected void load() {

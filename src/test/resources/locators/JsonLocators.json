@@ -1,0 +1,27 @@
+{
+  "BasePage": {
+    "navBar": "//*[@id='menu']",
+    "navBarItem": "//a[span='%s']",
+    "btnSubmit": "//input[@type='submit']",
+    "txtBoxPassword": "//*[@id='password']"
+  },
+  "BookTicketPage": {
+    "dropdownBookTicket": "//select[@name='%s']",
+    "lblPid": "//li[2]/strong[2]"
+  },
+  "LoginPage": {
+    "hyperlink": "//a[normalize-space()=\"%s\"]",
+    "txtBoxUserName": "//*[@id='username']"
+  },
+  "MyTicketPage": {
+    "txtMessageNoData": "//*[@id='content']",
+    "txtNote": "//*[@id='content']/div/li[1]",
+    "btnCancel": "//td/input[@value='Cancel']"
+  },
+  "RegisterPage": {
+    "txtBoxEmail": "//*[@id='email']",
+    "txtBoxConfirmPassword": "//*[@id='confirmPassword']",
+    "txtBoxPID": "//*[@id='pid']",
+    "lblErrorMsg": "//*[@class='message error']"
+  }
+}
