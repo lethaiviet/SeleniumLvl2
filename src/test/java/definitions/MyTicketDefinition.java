@@ -25,10 +25,12 @@ public class MyTicketDefinition implements En {
                     CacheHelper.getValue(Constants.CACHE_ALL_TICKET_INFO_ON_MY_TICKET, List.class);
 
             TicketInfo ticketInfoBookTicket = ticketInfoBookTicketList.get(0);
-            int lastIndex = ticketInfoMyTicketList.size() - 1;
-            TicketInfo ticketInfoMyTicket = ticketInfoMyTicketList.get(lastIndex);
-            String message = String.format("The ticket information on %s and %s page should be consistent", pageKey1, pageKey2);
-            Assert.assertEquals(ticketInfoBookTicket, ticketInfoMyTicket, message);
+            boolean isConsistent = ticketInfoMyTicketList.contains(ticketInfoBookTicket);
+
+            String message = String.format("The ticket information on BOOK_TICKET_PAGE and MY_TICKET_PAGE should be consistent \n" +
+                            "More detail:\n\t+ Ticket Info in BOOK_TICKET_PAGE: %s\n\t+ Ticket Info in MY_TICKET_PAGE: %s",
+                    ticketInfoBookTicketList.toString(), ticketInfoMyTicketList.toString());
+            Assert.assertTrue(isConsistent, message);
         });
 
         When("I scrape the total tickets in note on {word} {word} booking new tickets", (String pageKey, String type) -> {

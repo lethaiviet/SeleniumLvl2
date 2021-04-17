@@ -97,4 +97,16 @@ public class DriverUtils {
         byte[] fileContent = FileUtils.readFileToByteArray(src);
         return fileContent;
     }
+
+    public static Object execJavaScript(String script, Object... objs) {
+        return ((JavascriptExecutor) getDriver()).executeScript(script, objs);
+    }
+
+    public static void scrollToTop() {
+        execJavaScript("window.scrollTo(0, 0)");
+    }
+
+    public static void scrollToBottom() {
+        execJavaScript("window.scrollTo(0, document.body.scrollHeight)");
+    }
 }

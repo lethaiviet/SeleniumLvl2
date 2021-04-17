@@ -11,6 +11,7 @@ public class Hook implements En {
     public Hook() {
         AfterStep((Scenario scenario) -> {
             if (scenario.isFailed()) {
+                DriverUtils.scrollToBottom();
                 String screenshotName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
                 scenario.attach(DriverUtils.getByteScreenshot(), "image/png", screenshotName);
             }

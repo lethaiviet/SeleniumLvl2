@@ -53,10 +53,12 @@ public class MyTicketPage extends BasePage {
 
     public void removeAllTickets() {
         while (!isDisplayMessageNoData()) {
+            DriverUtils.waitForAjaxJQueryProcess();
             if (btnCancel.isDisplayed()) {
                 btnCancel.click();
                 DriverUtils.getWebDriver().switchTo().alert().accept();
-                DriverUtils.waitForAjaxJQueryProcess();
+            } else {
+                break;
             }
         }
     }
