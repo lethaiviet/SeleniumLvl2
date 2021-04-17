@@ -2,25 +2,27 @@ package utils;
 
 import commons.Constants;
 import drivers.DriverFactory;
-import org.apache.log4j.Logger;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.File;
+import java.io.IOException;
 
 import static org.openqa.selenium.remote.BrowserType.CHROME;
 
 public class DriverUtils {
     private static ThreadLocal<String> driverType = new ThreadLocal<>();
 
-    private static final Logger logger = Logger.getLogger(DriverUtils.class);
-
     private static String getDriverType() {
         if (driverType != null && driverType.get() == null) {
             driverType.set(CHROME);
         }
         return driverType.get();
-
     }
 
     public static void setDriverType(String type) {
@@ -58,7 +60,7 @@ public class DriverUtils {
     }
 
     public static void waitForAjaxJQueryProcess() {
-        logger.debug("Wait for ajax complete");
+        LogUtils.debug("Wait for ajax complete");
         long timeOutInSeconds = 10;
         WebDriverWait wait = new WebDriverWait(getWebDriver(), timeOutInSeconds);
 
@@ -69,7 +71,7 @@ public class DriverUtils {
                 return ajaxIsComplete;
             });
         } catch (Exception var1) {
-            logger.error("An error occurred when waitForAjaxJQueryProcess" + var1.getMessage());
+            LogUtils.error("An error occurred when waitForAjaxJQueryProcess" + var1.getMessage());
         }
     }
 
@@ -77,7 +79,7 @@ public class DriverUtils {
         try {
             Thread.sleep((long) (timeInSecond * 1000.0D));
         } catch (Exception var2) {
-            logger.error("An error occurred when delay: " + var2.getMessage());
+            LogUtils.error("An error occurred when delay: " + var2.getMessage());
         }
     }
 
@@ -88,5 +90,11 @@ public class DriverUtils {
     public static String getPageSource() {
         waitForAjaxJQueryProcess();
         return getWebDriver().getPageSource();
+    }
+
+    public static byte[] getByteScreenshot() throws IOException {
+        File src = ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.FILE);
+        byte[] fileContent = FileUtils.readFileToByteArray(src);
+        return fileContent;
     }
 }

@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Random;
 
 public class ComboBox extends Clickable implements IComboBox {
-    private Logger logger = Logger.getLogger(Element.class);
+    private final Logger logger = Logger.getLogger(Element.class);
 
     public ComboBox(String locator) {
         super(locator);

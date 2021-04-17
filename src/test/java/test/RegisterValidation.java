@@ -7,7 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features/register_validation.feature",
-        glue = {"definitions"}
+        glue = {"definitions"},
+        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 public class RegisterValidation extends CommonValidation {
 
