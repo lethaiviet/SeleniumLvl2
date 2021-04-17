@@ -107,7 +107,12 @@ Clone the repo
    ```sh
    cmd\02_OpenAllureServer.bat
    ```
-_For more examples, please refer to the [Documentation](https://example.com)_
+   [![allure-report][allure-report]](https://github.com/lethaiviet/SeleniumLvl2/blob/master/images/allure_report.png)
+4. Or Open extent report
+   ```sh
+   cmd\03_OpenExtentReport.bat
+   ```
+   [![extent-report][extent-report]](https://github.com/lethaiviet/SeleniumLvl2/blob/master/images/extent_report.png)
 
 <!-- CONTACT -->
 ## Contact
@@ -139,3 +144,5 @@ Currently, the report is generated allure-testng have the below issue, so the re
 [license-url]:https://github.com/lethaiviet/SeleniumLvl2/graphs/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [product-screenshot]: images/screenshot.png
+[allure-report]: images/allure_report.png
+[extent-report]: images/extent_report.png
