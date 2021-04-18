@@ -262,7 +262,7 @@ Project Link: [https://github.com/lethaiviet/SeleniumLvl2](https://github.com/le
 | Issue | How to fix |
 | ------------- | ------------- |
 | The report is generated **allure-testng** CANNOT show all the steps in cucumber  | Work around: <ul><li>Implement `cucumber.junit` with plugin `io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm` </li><li> Use extent report while waiting for allure-testng is fixed</li></ul> Note: <ul><li> [Allure Test NG report TestBody is missing](https://stackoverflow.com/questions/57566093/allure-test-ng-report-testbody-is-missing) </li><li>[Test body is missed in report if run test via "java org.testng.TestNG suite.xml"](https://github.com/allure-framework/allure-java/issues/301) </li> <li>[Test body is missing in (cucumber) testNG report"](https://github.com/allure-framework/allure-java/issues/398) </li></ul> |
-| Build project on IntelliJ IDEA with the below error: <pre lang=plain>`cannot find symbol int numTicketBooking = ticketInfoLst.get(0).getAmount();`</pre> | [Install Lombok Plugin on IntelliJ IDEA](https://projectlombok.org/setup/intellij)  |
+| Build project on IntelliJ IDEA with the below error: <pre lang=java>cannot find symbol int numTicketBooking = ticketInfoLst.get(0).getAmount();</pre> | [Install Lombok Plugin on IntelliJ IDEA](https://projectlombok.org/setup/intellij)  |
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
