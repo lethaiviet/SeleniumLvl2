@@ -102,103 +102,105 @@ website
         - [extent\_report.png](images/extent_report.png)
         - [logo.png](images/logo.png)
         - [screenshot.png](images/screenshot.png)
+    - [list.md](list.md)
     - [settings.gradle](settings.gradle)
     - __src__
         - __main__
             - __java__
-                - __commons__
-                    - [Constants.java](src/main/java/commons/Constants.java)
-
-                    - __enums__
-                        - [Dropdown.java](src/main/java/commons/enums/Dropdown.java)
-                        - [NavBar.java](src/main/java/commons/enums/NavBar.java)
-                        - [PageURL.java](src/main/java/commons/enums/PageURL.java)
-                - __controls__
-                    - __base__
-                        - [IBaseControl.java](src/main/java/controls/base/IBaseControl.java)
-                        - [IClickable.java](src/main/java/controls/base/IClickable.java)
-                        - [IEditable.java](src/main/java/controls/base/IEditable.java)
-                        - __imp__
-                            - [Action.java](src/main/java/controls/base/imp/Action.java)
-                            - [BaseControl.java](src/main/java/controls/base/imp/BaseControl.java)
-                            - [Clickable.java](src/main/java/controls/base/imp/Clickable.java)
-                            - [Editable.java](src/main/java/controls/base/imp/Editable.java)
-                    - __common__
-                        - [IButton.java](src/main/java/controls/common/IButton.java)
-                        - [IComboBox.java](src/main/java/controls/common/IComboBox.java)
-                        - [IElement.java](src/main/java/controls/common/IElement.java)
-                        - [ILabel.java](src/main/java/controls/common/ILabel.java)
-                        - [ITextBox.java](src/main/java/controls/common/ITextBox.java)
-                        - __imp__
-                            - [Button.java](src/main/java/controls/common/imp/Button.java)
-                            - [ComboBox.java](src/main/java/controls/common/imp/ComboBox.java)
-                            - [Element.java](src/main/java/controls/common/imp/Element.java)
-                            - [Label.java](src/main/java/controls/common/imp/Label.java)
-                            - [TextBox.java](src/main/java/controls/common/imp/TextBox.java)
-                - __data__
-                    - [TicketInfo.java](src/main/java/data/TicketInfo.java)
-                    - [UserInfo.java](src/main/java/data/UserInfo.java)
-                - __drivers__
-                    - [ChromeDriver.java](src/main/java/drivers/ChromeDriver.java)
-                    - [DriverFactory.java](src/main/java/drivers/DriverFactory.java)
-                    - [DriverManager.java](src/main/java/drivers/DriverManager.java)
-                    - [FirefoxDriver.java](src/main/java/drivers/FirefoxDriver.java)
-                - __pages__
-                    - [BasePage.java](src/main/java/pages/BasePage.java)
-                    - [BookTicketPage.java](src/main/java/pages/BookTicketPage.java)
-                    - [HomePage.java](src/main/java/pages/HomePage.java)
-                    - [LoginPage.java](src/main/java/pages/LoginPage.java)
-                    - [MyTicketPage.java](src/main/java/pages/MyTicketPage.java)
-                    - [RegisterPage.java](src/main/java/pages/RegisterPage.java)
-                - __utils__
-                    - [CacheHelper.java](src/main/java/utils/CacheHelper.java)
-                    - [DriverUtils.java](src/main/java/utils/DriverUtils.java)
-                    - [JsonHelper.java](src/main/java/utils/JsonHelper.java)
-                    - [JsonLocatorUtils.java](src/main/java/utils/JsonLocatorUtils.java)
-                    - [LogUtils.java](src/main/java/utils/LogUtils.java)
-                    - [ScraperHelper.java](src/main/java/utils/ScraperHelper.java)
-                    - [StringHelper.java](src/main/java/utils/StringHelper.java)
-                    - [UserInfoUtils.java](src/main/java/utils/UserInfoUtils.java)
-                    - [common.java](src/main/java/utils/common.java)
-            - __resources__
+                - __com__
+                    - __railway__
+                        - __commons__
+                            - [Constants.java](src/main/java/com/railway/commons/Constants.java)
+                            - __enums__
+                                - [Dropdown.java](src/main/java/com/railway/commons/enums/Dropdown.java)
+                                - [Location.java](src/main/java/com/railway/commons/enums/Location.java)
+                                - [NavBar.java](src/main/java/com/railway/commons/enums/NavBar.java)
+                                - [PageURL.java](src/main/java/com/railway/commons/enums/PageURL.java)
+                        - __controls__
+                            - __base__
+                                - [IBaseControl.java](src/main/java/com/railway/controls/base/IBaseControl.java)
+                                - [IClickable.java](src/main/java/com/railway/controls/base/IClickable.java)
+                                - [IEditable.java](src/main/java/com/railway/controls/base/IEditable.java)
+                                - __imp__
+                                    - [Action.java](src/main/java/com/railway/controls/base/imp/Action.java)
+                                    - [BaseControl.java](src/main/java/com/railway/controls/base/imp/BaseControl.java)
+                                    - [Clickable.java](src/main/java/com/railway/controls/base/imp/Clickable.java)
+                                    - [Editable.java](src/main/java/com/railway/controls/base/imp/Editable.java)
+                            - __common__
+                                - [IButton.java](src/main/java/com/railway/controls/common/IButton.java)
+                                - [IComboBox.java](src/main/java/com/railway/controls/common/IComboBox.java)
+                                - [IElement.java](src/main/java/com/railway/controls/common/IElement.java)
+                                - [ILabel.java](src/main/java/com/railway/controls/common/ILabel.java)
+                                - [ITextBox.java](src/main/java/com/railway/controls/common/ITextBox.java)
+                                - __imp__
+                                    - [Button.java](src/main/java/com/railway/controls/common/imp/Button.java)
+                                    - [ComboBox.java](src/main/java/com/railway/controls/common/imp/ComboBox.java)
+                                    - [Element.java](src/main/java/com/railway/controls/common/imp/Element.java)
+                                    - [Label.java](src/main/java/com/railway/controls/common/imp/Label.java)
+                                    - [TextBox.java](src/main/java/com/railway/controls/common/imp/TextBox.java)
+                        - __data__
+                            - [TicketInfo.java](src/main/java/com/railway/data/TicketInfo.java)
+                            - [UserInfo.java](src/main/java/com/railway/data/UserInfo.java)
+                        - __drivers__
+                            - [ChromeDriver.java](src/main/java/com/railway/drivers/ChromeDriver.java)
+                            - [DriverFactory.java](src/main/java/com/railway/drivers/DriverFactory.java)
+                            - [DriverManager.java](src/main/java/com/railway/drivers/DriverManager.java)
+                            - [FirefoxDriver.java](src/main/java/com/railway/drivers/FirefoxDriver.java)
+                        - __pages__
+                            - [BasePage.java](src/main/java/com/railway/pages/BasePage.java)
+                            - [BookTicketPage.java](src/main/java/com/railway/pages/BookTicketPage.java)
+                            - [HomePage.java](src/main/java/com/railway/pages/HomePage.java)
+                            - [LoginPage.java](src/main/java/com/railway/pages/LoginPage.java)
+                            - [MyTicketPage.java](src/main/java/com/railway/pages/MyTicketPage.java)
+                            - [RegisterPage.java](src/main/java/com/railway/pages/RegisterPage.java)
+                        - __utils__
+                            - [CacheHelper.java](src/main/java/com/railway/utils/CacheHelper.java)
+                            - [DriverUtils.java](src/main/java/com/railway/utils/DriverUtils.java)
+                            - [JsonHelper.java](src/main/java/com/railway/utils/JsonHelper.java)
+                            - [JsonLocatorUtils.java](src/main/java/com/railway/utils/JsonLocatorUtils.java)
+                            - [LogUtils.java](src/main/java/com/railway/utils/LogUtils.java)
+                            - [ScraperHelper.java](src/main/java/com/railway/utils/ScraperHelper.java)
+                            - [StringHelper.java](src/main/java/com/railway/utils/StringHelper.java)
+                            - [UserInfoUtils.java](src/main/java/com/railway/utils/UserInfoUtils.java)
         - __test__
             - __java__
-                - __definitions__
-                    - [BookTicketDefinition.java](src/test/java/definitions/BookTicketDefinition.java)
-                    - [CommonDefinition.java](src/test/java/definitions/CommonDefinition.java)
-                    - [Hook.java](src/test/java/definitions/Hook.java)
-                    - [LoginDefinition.java](src/test/java/definitions/LoginDefinition.java)
-                    - [MyTicketDefinition.java](src/test/java/definitions/MyTicketDefinition.java)
-                    - [RegisterDefinition.java](src/test/java/definitions/RegisterDefinition.java)
-                - __test__
-                    - [BookTicketValidation.java](src/test/java/test/BookTicketValidation.java)
-                    - [CommonValidation.java](src/test/java/test/CommonValidation.java)
-                    - [LoginValidation.java](src/test/java/test/LoginValidation.java)
-                    - [MyTicketValidation.java](src/test/java/test/MyTicketValidation.java)
-                    - [RegisterValidation.java](src/test/java/test/RegisterValidation.java)
+                - __com__
+                    - __railway__
+                        - __definitions__
+                            - [BookTicketDefinition.java](src/test/java/com/railway/definitions/BookTicketDefinition.java)
+                            - [CommonDefinition.java](src/test/java/com/railway/definitions/CommonDefinition.java)
+                            - [Hook.java](src/test/java/com/railway/definitions/Hook.java)
+                            - [LoginDefinition.java](src/test/java/com/railway/definitions/LoginDefinition.java)
+                            - [MyTicketDefinition.java](src/test/java/com/railway/definitions/MyTicketDefinition.java)
+                            - [RegisterDefinition.java](src/test/java/com/railway/definitions/RegisterDefinition.java)
+                        - __test__
+                            - [BookTicketValidation.java](src/test/java/com/railway/test/BookTicketValidation.java)
+                            - [CommonValidation.java](src/test/java/com/railway/test/CommonValidation.java)
+                            - [LoginValidation.java](src/test/java/com/railway/test/LoginValidation.java)
+                            - [MyTicketValidation.java](src/test/java/com/railway/test/MyTicketValidation.java)
+                            - [RegisterValidation.java](src/test/java/com/railway/test/RegisterValidation.java)
             - __resources__
+                - [allure.properties](src/test/resources/allure.properties)
                 - __data__
-                    - __dataExcel__
-                        - [user\_info.xlsx](src/test/resources/data/dataExcel/user_info.xlsx)
-                    - __dataJson__
-                        - [user\_info.json](src/test/resources/data/dataJson/user_info.json)
+                    - __data\_excel__
+                        - [user\_info.xlsx](src/test/resources/data/data_excel/user_info.xlsx)
+                    - __data\_json__
+                        - [user\_info.json](src/test/resources/data/data_json/user_info.json)
+                - [extent.properties](src/test/resources/extent.properties)
                 - __features__
                     - [book\_ticket\_validation.feature](src/test/resources/features/book_ticket_validation.feature)
                     - [login\_validation.feature](src/test/resources/features/login_validation.feature)
                     - [my\_ticket\_validation.feature](src/test/resources/features/my_ticket_validation.feature)
                     - [register\_validation.feature](src/test/resources/features/register_validation.feature)
                 - __locators__
-                    - [JsonLocators.json](src/test/resources/locators/JsonLocators.json)
-                - __suites__
-                    - [suite01.xml](src/test/resources/suites/suite01.xml)
+                    - [locators.json](src/test/resources/locators/locators.json)
                 - [log4j.properties](src/test/resources/log4j.properties)
-                - [allure.properties](src/test/resources/allure.properties)
-                - [extent.properties](src/test/resources/extent.properties)
-- __tool__
-    - __allure\-commandline\-2.13.9__
-    - __converterTool__
-        - [ConverterExcelAndJson.exe](tool/converterTool/ConverterExcelAndJson.exe)
-
+                - __suites__
+                    - [RegressionTesting.xml](src/test/resources/suites/RegressionTesting.xml)
+    - __tool__
+        - __allure\-commandline\-2.13.9__
+        - __converterTool__
+            - [ConverterExcelAndJson.exe](tool/converterTool/ConverterExcelAndJson.exe)
 </details>
 
 <!-- GETTING STARTED -->
