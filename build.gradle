@@ -102,7 +102,7 @@ dependencies {
 test {
     useTestNG() {
         useDefaultListeners = true
-        suites "src/test/resources/suites/suite01.xml"
+        suites "src/test/resources/suites/RegressionTesting.xml"
     }
     testLogging {
         showStandardStreams = true

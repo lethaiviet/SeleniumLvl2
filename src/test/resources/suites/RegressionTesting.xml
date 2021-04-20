@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression testing">
+    <test name="Parallel" thread-count="5" parallel="true">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.railway.test.RegisterValidation"/>
+            <class name="com.railway.test.LoginValidation"/>
+            <class name="com.railway.test.BookTicketValidation"/>
+        </classes>
+    </test>
+
+    <test name="Non Parallel" parallel="false">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.railway.test.MyTicketValidation"/>
+        </classes>
+    </test>
+</suite>
